@@ -1,25 +1,195 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,700&family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Lato:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
-html {
-  font-family: 'Bricolage Grotesque', sans-serif;
-  line-height: 1.5;
-
-  color: #defaf8;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-  height: 100%;
-}
-
 body {
   margin: 0;
+  font-family: 'Lato', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(#222c31, #111d32);
+  color: #d9e2f1;
+  min-height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#main-header {
+  margin: 2rem auto;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: #87a7a4;
+}
+
+#main-header img {
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(14, 26, 28, 0.8));
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  margin: 0 auto 1rem auto;
+  padding: 1rem;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.6));
+  border: 2px solid #0a2f11;
+  border-radius: 50%;
+  background: #2a3b47;
+}
+
+#main-header h1 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+main {
+  width: 90%;
+  max-width: 50rem;
+  margin: 2rem auto;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+#envelopes-container {
+  margin: 0 auto 2rem;
   padding: 2rem;
-  background: linear-gradient(180deg, #1f1c2c 0%, #1f1c2c 100%);
+  border: 1px solid #05827e;
+  border-radius: 6px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+#envelopes-container h2 {
+  margin: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #88dbd6;
+  text-transform: uppercase;
+}
+
+#envelopes-container #envelope-counter {
+  width: 4rem;
+  text-align: center;
+  margin: 0.5rem;
+  padding: 0.5rem 0.25rem;
+  border: 1px solid #88dbd6;
+  border-radius: 4px;
+  background-color: #0e1a1c;
+  color: #88dbd6;
+  font-size: 1rem;
+}
+
+#envelopes-container input::-webkit-outer-spin-button,
+#envelopes-container input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+#envelopes-container input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+#envelopes-container .button {
+  cursor: pointer;
+  display: inline-flex;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #16f3eb;
+  color: #051a19;
+  border: 1px solid #16f3eb;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+#envelopes-container .button:hover {
+  background-color: #0e1a1c;
+  color: #16f3eb;
+}
+
+#envelopes-container .button-icon {
+  color: #051a19;
+  height: 1.25rem;
+}
+
+#envelopes-container .button:hover .button-icon{
+  color: #f29165;
+}
+
+.envelopes-button {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.envelopes {
+  padding: 2rem;
+  border: 1px solid #05827e;
+  border-radius: 6px;
+}
+
+.envelopes p {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+.envelopes .envelopes-info {
+  display: block;
+  font-size: 0.8rem;
+  color: #9dc5c4;
+  text-align: center;
+}
+
+.envelopes-output {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #b5dad7;
+}
+
+.envelopes-output.negative {
+  color: #f3a6a6;
+}
+
+.envelopes ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.envelopes li {
+  width: 2rem;
+  margin-left: 0.5rem;
+  color: #8eb6b3;
+  padding: 0.2rem;
+}
+
+.envelopes li:first-child {
+  color: #87f0e9;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.envelopes li.selected {
+  background-color: #335453;
+  color: #d9f7f6;
+  border-radius: 4px;
 }
